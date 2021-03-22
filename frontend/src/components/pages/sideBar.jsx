@@ -15,11 +15,10 @@ import DuoIcon from "@material-ui/icons/Duo";
 import PhoneIcon from "@material-ui/icons/Phone";
 import { useDispatch } from "react-redux";
 import { openSend } from "../redux/actionCreator";
-import {useHistory} from "react-router-dom"
+import { useHistory } from "react-router-dom";
 function Sidebar() {
-
   const dispatch = useDispatch();
-const history=useHistory()
+  const history = useHistory();
 
   return (
     <div className="sidebar">
@@ -35,14 +34,40 @@ const history=useHistory()
         Icon={InboxIcon}
         title="Inbox"
         number={1000}
-      click={()=>history.push("/")}
+        click={() => history.push("/")}
       />
-      <SidebarOption Icon={StarIcon} title="Starred" type="button" number={22}  click={()=>history.push("/mail/starred")}/>
-      <SidebarOption Icon={AccessTimeIcon} title="Snoozed" number={11}   click={()=>history.push("/mail/snoozed")} />
-      <SidebarOption Icon={LabelImportantIcon} title="Important" number={11}   click={()=>history.push("/mail/important")}/>
-      <SidebarOption Icon={NearMeIcon} title="Sent" number={11}   click={()=>history.push("/mail/sent")}/>
-      <SidebarOption Icon={NoteIcon} title="Drafts" number={11}   click={()=>history.push("/mail/drafts")}/>
-      <SidebarOption Icon={ExpandMoreIcon} title="More" number={11}  />
+      <SidebarOption
+        Icon={StarIcon}
+        title="Starred"
+        type="button"
+        number={22}
+        click={() => history.push("/mail/starred")}
+      />
+      <SidebarOption
+        Icon={AccessTimeIcon}
+        title="Snoozed"
+        number={0}
+        click={() => history.push("/mail/snoozed")}
+      />
+      <SidebarOption
+        Icon={LabelImportantIcon}
+        title="Important"
+        number={18}
+        click={() => history.push("/mail/important")}
+      />
+      <SidebarOption
+        Icon={NearMeIcon}
+        title="Sent"
+        number={0}
+        click={() => history.push("/mail/sent")}
+      />
+      <SidebarOption
+        Icon={NoteIcon}
+        title="Drafts"
+        number={19}
+        click={() => history.push("/mail/drafts")}
+      />
+      <SidebarOption Icon={ExpandMoreIcon} title="More" number={11} />
 
       <div className="sidebar__footer">
         <div className="sidebar__footerIcons">

@@ -4,12 +4,10 @@ const {
   getMailsDetails,
   postData,
   deleteData,
-  
 } = require("../controllers/mailController");
 
 router.get("/mails", getMailsDetails);
 router.post("/sendMail", postData);
-router.delete("/:id", deleteData);
-
+router.delete("/mail/:id", deleteData);
 
 module.exports = router;

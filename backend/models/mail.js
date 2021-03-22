@@ -24,13 +24,13 @@ const mailsSchema = new Schema(
       required: true,
     },
     type: {
-        type: String,
-        required: true,
-      },
+      type: String,
+      required: true,
+    },
     date: {
-        type: String,
-        required: true,
-      },
+      type: String,
+      required: true,
+    },
   },
   { versionKey: false }
 );

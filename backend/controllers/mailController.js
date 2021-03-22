@@ -2,7 +2,6 @@ const Mails = require("../models/mail");
 const { v4: uuidv4 } = require("uuid");
 
 const getMailsDetails = (req, res) => {
-
   Mails.find()
     .then((mails) => {
       res.json(mails);
@@ -18,25 +17,24 @@ const deleteData = (req, res) => {
 };
 
 const postData = (req, res) => {
-
-
-
   let id = uuidv4();
-    let date=new Date().toLocaleString()
-  const { sender, title, box,content,email } = req.body;
-  const newMail = new Employees({
+  let date = new Date().toLocaleString();
+  let sender = "Bhupendra";
+  let type = "sent";
+  const { title, content, email } = req.body;
+  const newMail = new Mails({
     id,
     sender,
     title,
     content,
     email,
-    box,
-    date
+    type,
+    date,
   });
 
   newMail
     .save()
-    .then(() => res.json("Employees added"))
+    .then(() => res.json("Mails added"))
     .catch((err) => res.status(400).json("Error" + err));
 };
-module.exports = { getMailsDetails,  postData, deleteData };
+module.exports = { getMailsDetails, postData, deleteData };

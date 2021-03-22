@@ -18,15 +18,17 @@ import Section from "./section";
 import PeopleIcon from "@material-ui/icons/People";
 import LocalOfferIcon from "@material-ui/icons/LocalOffer";
 
-function EmailRow() {
+function Snoozed() {
   const history = useHistory();
   const dispatch = useDispatch();
-  const data = useSelector((state) => state.mailsData);
+  const allMails = useSelector((state) => state.mailsData);
 
+  console.log("hi");
   useEffect(() => {
     dispatch(getAllMails());
   }, []);
-  //console.log(data)
+  const data = allMails.filter((item) => item.type == "snoozed");
+  console.log(data);
   return (
     <>
       <div className="emailList">
@@ -37,7 +39,7 @@ function EmailRow() {
             <IconButton>
               <ArrowDropDown />
             </IconButton>
-            <IconButton>
+            <IconButton onClick={() => window.location.reload(false)}>
               <RedoIcon />
             </IconButton>
             <IconButton>
@@ -106,4 +108,4 @@ function EmailRow() {
   );
 }
 
-export default EmailRow;
+export default Snoozed;

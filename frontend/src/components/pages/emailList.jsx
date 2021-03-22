@@ -55,7 +55,7 @@ function EmailList() {
       </div>
 
       <div className="emailList__list">
-       <EmailRow/>
+        <EmailRow />
       </div>
     </div>
   );
