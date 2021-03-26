@@ -16,11 +16,11 @@
 .mail__body {
   display: flex;
   flex-direction: column;
-  margin: 30px;
+  margin: 10px;
   background-color: white;
   padding: 20px;
   height: 100vh;
-  box-shadow: 0px 5px 7px 0px rgba(0, 0, 0, 0.25);
+  box-shadow: black;
 }
 
 .mail__bodyHeader {
@@ -45,7 +45,7 @@
   top: 24px;
   right: 0;
   font-size: 12px;
-  color: grey;
+  color:white;
 }
 
 .mail__message > p {

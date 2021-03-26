@@ -13,13 +13,17 @@ import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 import PersonIcon from "@material-ui/icons/Person";
 import DuoIcon from "@material-ui/icons/Duo";
 import PhoneIcon from "@material-ui/icons/Phone";
-import { useDispatch } from "react-redux";
+import { useDispatch ,useSelector} from "react-redux";
 import { openSend } from "../redux/actionCreator";
 import { useHistory } from "react-router-dom";
+import {SentNumber} from "./sent"
+
+
 function Sidebar() {
   const dispatch = useDispatch();
   const history = useHistory();
-
+  const sentNumber=useSelector((state)=>state.num)
+  console.log(SentNumber)
   return (
     <div className="sidebar">
       <Button

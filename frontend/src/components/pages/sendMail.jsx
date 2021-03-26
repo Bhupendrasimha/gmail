@@ -13,7 +13,7 @@ function SendMail() {
 
   const onSubmit = (formData) => {
     dispatch(postAllMails(formData));
-    console.log(formData);
+   // console.log(formData);
   };
 
   return (
@@ -36,20 +36,22 @@ function SendMail() {
         {errors.to && <p className="sendMail__error">To is required !!</p>}
 
         <input
-          name="content"
+          name="title"
           placeholder="Subject"
           type="text"
+          className="sendMail__subject"
           ref={register({ required: true })}
         />
 
         {errors.subject && (
           <p className="sendMail__error">Subject is required !!</p>
         )}
-        <input
-          name="title"
+        <textarea
+          name="content"
           placeholder="Message"
           type="text"
           className="sendMail__message"
+        
           ref={register({ required: true })}
         />
         {errors.message && (

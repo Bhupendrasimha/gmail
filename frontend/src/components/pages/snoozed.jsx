@@ -23,12 +23,12 @@ function Snoozed() {
   const dispatch = useDispatch();
   const allMails = useSelector((state) => state.mailsData);
 
-  console.log("hi");
+  //console.log("hi");
   useEffect(() => {
     dispatch(getAllMails());
   }, []);
   const data = allMails.filter((item) => item.type == "snoozed");
-  console.log(data);
+ // console.log(data);
   return (
     <>
       <div className="emailList">

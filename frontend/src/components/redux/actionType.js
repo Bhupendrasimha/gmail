@@ -10,3 +10,5 @@ export const OPEN_SEND = "OPEN_SEND";
 export const CLOSE_SEND = "CLOSE_SEND";
 
 export const DELETE_MAIL = "DELETE_MAIL";
+
+export const SENT_MAIL_COUNT="SENT_MAIL_COUNT"

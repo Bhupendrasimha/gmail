@@ -27,9 +27,10 @@ function Mail() {
   const history = useHistory();
   const location = useLocation();
   const dispatch = useDispatch();
-
   const mail = location.state.data;
-  console.log(mail);
+  //console.log(mail);
+
+  console.log(location)
   const handleDelete = () => {
     dispatch(deleteMailById(mail._id));
   };

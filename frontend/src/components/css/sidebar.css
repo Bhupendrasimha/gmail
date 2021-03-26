@@ -9,13 +9,15 @@
   margin-left: 10px !important;
   margin-bottom: 15px !important;
   text-transform: capitalize !important;
-  color: grey;
+  border: 1px solid whitesmoke !important; 
   padding-left: 35px !important;
   padding-right: 35px !important;
   padding-top: 15px !important;
   padding-bottom: 15px !important;
   border-radius: 30px !important;
-  box-shadow: 0px 2px 5px -2px rgb(0, 0, 0, 0.75);
+  box-shadow:black;
+  background: whitesmoke !important;
+
 }
 
 .sidebar__footer {

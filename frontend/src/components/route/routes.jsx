@@ -1,5 +1,4 @@
 import React from "react";
-
 import Header from "../pages/header";
 import "../../App.css";
 import Sidebar from "../pages/sideBar";

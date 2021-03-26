@@ -8,11 +8,13 @@ import {
   OPEN_SEND,
   CLOSE_SEND,
   DELETE_MAIL,
+  SENT_MAIL_COUNT
 } from "./actionType";
 
 const initState = {
   sendMessageIsOpen: false,
   mailsData: [],
+  num:[]
 };
 
 export const reducer = (state = initState, { type, payload }) => {
@@ -57,7 +59,11 @@ export const reducer = (state = initState, { type, payload }) => {
       return {
         ...state,
       };
-
+      case SENT_MAIL_COUNT:
+        return{
+          ...state,
+          num:payload
+        }
     default:
       return state;
   }

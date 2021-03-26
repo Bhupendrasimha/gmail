@@ -8,6 +8,7 @@ import {
   OPEN_SEND,
   CLOSE_SEND,
   DELETE_MAIL,
+SENT_MAIL_COUNT
 } from "./actionType";
 
 import axios from "axios";
@@ -78,3 +79,8 @@ export const deleteMailById = (payload) => (dispatch) => {
     .then((res) => dispatch(deleteMail(res)))
     .catch((err) => console.log(err));
 };
+
+export const sentCount=(payload)=>({
+  type:SENT_MAIL_COUNT,
+  payload
+})

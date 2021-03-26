@@ -17,18 +17,23 @@ import InboxIcon from "@material-ui/icons/Inbox";
 import Section from "./section";
 import PeopleIcon from "@material-ui/icons/People";
 import LocalOfferIcon from "@material-ui/icons/LocalOffer";
+import {sentCount} from "../redux/actionCreator"
+
+export let SentNumber;
 
 function Sent() {
   const history = useHistory();
   const dispatch = useDispatch();
   const allMails = useSelector((state) => state.mailsData);
-
-  console.log("hi");
+ 
+  //console.log("hi");
   useEffect(() => {
     dispatch(getAllMails());
   }, []);
   const data = allMails.filter((item) => item.type == "sent");
-  console.log(data);
+  let val=data.length 
+  dispatch(sentCount(val))
+  // console.log(data);
   return (
     <>
       <div className="emailList">
@@ -107,5 +112,7 @@ function Sent() {
     </>
   );
 }
+
+
 
 export default Sent;
